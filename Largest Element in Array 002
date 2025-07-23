@@ -1,0 +1,34 @@
+// Java Code
+
+class Solution {
+    public static int largest(int[] arr) {
+        // code here
+        int ans = 0;
+        
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] > ans){
+                ans = arr[i];
+            }
+        }
+        
+        return ans;
+        
+    }
+}
+
+// JavaScript Code
+
+class Solution {
+    largest(arr) {
+        // code here
+        let ans = 0;
+        
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] > ans){
+                ans = arr[i];
+            }
+        }
+        
+        return ans;
+    }
+}
