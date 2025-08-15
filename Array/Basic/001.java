@@ -13,3 +13,22 @@ class Solution {
         return ans;
     }
 }
+
+// Searching in an Array
+
+class Solution {
+    public int search(int k, ArrayList<Integer> arr) {
+        // code here
+        int ans = -1;
+        
+        for(int i = 0; i < arr.size(); i++){
+            if(arr.get(i) == k){
+                ans = i+1;
+                
+                break;
+            }
+        }
+        
+        return ans;
+    }
+}
