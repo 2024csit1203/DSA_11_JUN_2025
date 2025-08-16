@@ -1,2 +1,3 @@
 Largest Element in Array -> 15 Aug 2025 -> 001
+Searching in an Array -> 15 Aug 2025 -> 002
 Searching in an Array
