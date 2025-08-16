@@ -3,3 +3,5 @@ Searching in an Array -> 15 Aug 2025 -> 002
 Array Search -> 15 Aug 2025 -> 003
 Rotate Array by One -> 15 Aug 2025 -> 004
 Value equal to index value -> 15 Aug 2025 -> 005
+Alternates in an Array -> 16 Aug 2025 -> 006
+
