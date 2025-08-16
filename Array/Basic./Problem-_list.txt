@@ -4,4 +4,9 @@ Array Search -> 15 Aug 2025 -> 003
 Rotate Array by One -> 15 Aug 2025 -> 004
 Value equal to index value -> 15 Aug 2025 -> 005
 Alternates in an Array -> 16 Aug 2025 -> 006
+Sum of Array -> 16 Aug 2025 -> 007
+Count of smaller elements -> 16 Aug 2025 -> 008
+Count Odd and Even -> 16 Aug 2025 -> 009
+Print Elements of Array -> 16 Aug 2025 -> 010
+
 
