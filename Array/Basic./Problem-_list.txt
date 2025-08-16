@@ -2,4 +2,4 @@ Largest Element in Array -> 15 Aug 2025 -> 001
 Searching in an Array -> 15 Aug 2025 -> 002
 Array Search -> 15 Aug 2025 -> 003
 Rotate Array by One -> 15 Aug 2025 -> 004
-Searching in an Array
+Value equal to index value -> 15 Aug 2025 -> 005
