@@ -86,3 +86,71 @@ class Solution {
         return ans;
     }
 }
+
+// Multiplication Table -> 03 Sep 2025
+
+class Solution {
+    static ArrayList<Integer> getTable(int n) {
+        // code here
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for(int i = 1; i <= 10; i++){
+            list.add(n*i);
+        }
+        
+        return list;
+    }
+}
+
+// The dice problem  -> 03 Sep 2025
+
+class Solution {
+    static int oppositeFaceOfDice(int n) {
+        // code here
+        int ans = 0;
+        if(n == 1){
+            ans = 6;
+        }
+        
+        else if(n == 2){
+            ans = 5;
+        }
+        
+        else if(n == 3){
+            ans = 4;
+        }
+        
+        else if(n == 4){
+            ans = 3;
+        }
+        
+        else if ( n == 5){
+            ans = 2;
+        }
+        
+        else if (n == 6){
+            ans = 1;
+        }
+        
+        return ans;
+    }
+}
+
+// Greatest of three numbers  -> 03 Sep 2025
+
+class Solution {
+    public int greatestOfThree(int a, int b, int c) {
+        // code here
+        
+        if(a >= b && a >= c){
+            return a;
+        }
+        else if(b >= c && b >= a){
+            return b;
+        }
+        
+        else{
+            return c;
+        }
+    }
+}
