@@ -154,3 +154,14 @@ class Solution {
         }
     }
 }
+
+// Simple Interest -> 05 Sep 2025
+
+class Solution {
+    double simpleInterest(int P, int R, int T) {
+        // code here
+        double ans = (P * R * T) / 100.0;  // Ensure division happens in double
+        return ans;
+    }
+}
+
