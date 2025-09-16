@@ -187,3 +187,56 @@ class Solution {
     }
 }
 
+// 016. First n Fibonacci -> 16 Sep 2025
+
+class Solution {
+    // Function to return list containing first n fibonacci numbers.
+    public static int[] fibonacciNumbers(int n) {
+        // Your code here
+        int arr[] = new int[n];
+        
+        for(int i = 0; i < arr.length; i++){
+            if(i == 0){
+                arr[i] = 0;
+            }
+            else if (i == 1){
+                arr[i] = 1;
+            }
+            
+            else{
+                arr[i] = arr[i-1] + arr[i-2];
+            }
+        }
+        
+        return arr;
+        
+        
+        
+    }
+}
+
+
+// 017. LCM And GCD -> 16 Sep 2025
+
+class Solution {
+    
+    // GCD Function
+    static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+        
+    public static int[] lcmAndGcd(int a, int b) {
+        
+        int g = gcd(a, b);
+        int l = (a * b) / g;
+        return new int[]{l, g};
+        
+    }
+}
+
+
