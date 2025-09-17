@@ -239,4 +239,47 @@ class Solution {
     }
 }
 
+// 018. Median of an Array -> 17 Sep 2025
+
+class Solution {
+    public double findMedian(int[] arr) {
+        // Code here..
+       double ans = 0;
+        int n = arr.length;
+        Arrays.sort(arr);
+
+        // Even case
+        if (n % 2 == 0) {
+            int leftIndex = (n / 2) - 1;
+            int rightIndex = n / 2;
+            ans = (arr[leftIndex] + arr[rightIndex]) / 2.0; // ✅ .0 add kiya for double division
+        } 
+        // Odd case
+        else {
+            int index = n / 2;  // ✅ yaha (n+1)/2 - 1 karne ki need nahi, direct n/2 se mil jayega
+            ans = arr[index];
+        }
+
+        return ans;
+    }
+}
+
+// 019. GCD of two numbers -> 17 Sep 2025
+
+class Solution {
+    
+     
+    public static int gcd(int a, int b) {
+        // code here
+        
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+        
+    }
+}
+
 
