@@ -58,3 +58,34 @@ class Solution {
     }
 }
 
+// 003. Nth Fibonacci Number -> 17 Sep 2025
+
+class Solution {
+    public int nthFibonacci(int n) {
+        // Base cases
+        if (n == 0) return 0;
+        if (n == 1) return 1;
+
+        int arr[] = new int[n + 1];
+        arr[0] = 0; // 1st Fibonacci
+        arr[1] = 1; // 2nd Fibonacci
+
+        for (int i = 2; i <= n; i++) {
+            arr[i] = arr[i - 1] + arr[i - 2];
+        }
+
+        return arr[n];
+        
+    }
+}
+
+// 004. Square Root -> 17 Sep 2025
+
+class Solution {
+    int floorSqrt(int n) {
+        // use Math.sqrt and floor it
+        int ans = (int) Math.floor(Math.sqrt(n));
+        return ans;
+    }
+}
+
