@@ -18,3 +18,21 @@ class Solution {
         
     }
 }
+
+// 002. Add Binary Strings -> 19 Sep 2025
+
+import java.math.BigInteger;
+class Solution {
+    public String addBinary(String s1, String s2) {
+        // Convert binary strings to BigInteger
+        BigInteger num1 = new BigInteger(s1, 2);
+        BigInteger num2 = new BigInteger(s2, 2);
+
+        // Add them
+        BigInteger sum = num1.add(num2);
+
+        // Convert back to binary string
+        return sum.toString(2);
+        
+    }
+}

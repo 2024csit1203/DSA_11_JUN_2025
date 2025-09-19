@@ -89,3 +89,87 @@ class Solution {
     }
 }
 
+// 005. Armstrong Numbers -> 19 Sep 2025
+
+class Solution {
+    static boolean armstrongNumber(int n) {
+        // code here
+        int m = n;
+        int sum = 0;
+        while(n > 0){
+            int digit = n % 10;
+            n = n/10;
+            
+            sum = sum + (int) Math.pow(digit, 3);
+        }
+        
+        if(sum == m){
+            return true;
+        }
+        
+        return false;
+    }
+}
+
+// 006. Largest number possible -> 19 Sep 2025
+
+class Solution {
+    static String findLargest(int n, int s) {
+       // अगर sum possible नहीं है
+    if (s > 9 * n || s <= 0 && n > 1) {
+        return "-1";
+    }
+
+    StringBuilder ans = new StringBuilder();
+
+    for (int i = 0; i < n; i++) {
+        int digit = 9;
+
+        while (digit >= 0) {
+            if (s - digit >= 0) {
+                ans.append(digit);  // digit डाल दो
+                s -= digit;         // sum कम कर दो
+                break;              // अगले digit पर जाओ
+            }
+            digit--;
+        }
+    }
+
+    return ans.toString();
+        
+    }
+}
+
+// 007. Sum of First N Natural Numbers -> 19 Sep 2025
+
+class Solution {
+    static int sumOfNaturals(int n) {
+        // code here
+        int sum = 0;
+        
+        for(int i = 1; i <= n; i++){
+            sum += i;
+        }
+        
+        return sum;
+    }
+}
+
+// 008. Form a number divisible by 3 using array digits -> 19 Sep 2025
+
+class Solution {
+    static int isPossible(int N, int arr[]) {
+        // code here
+        
+         long sum = 0;
+
+    // Loop through the array to calculate the sum
+    for (int i = 0; i < N; i++) {
+        sum += arr[i];
+    }
+
+    // Return 1 if the sum is divisible by 3, else return 0
+    return (sum % 3 == 0) ? 1 : 0;
+    }
+}
+

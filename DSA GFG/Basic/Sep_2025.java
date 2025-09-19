@@ -317,4 +317,52 @@ class Solution {
     }
 }
 
+// 022. Replace all 0's with 5 -> 19 Sep 2025
+
+class Solution {
+    int convertfive(int num) {
+        // Your code here
+        int ans = 0;
+        int mul = 1;
+        
+        if(num == 0){
+            return 5;
+        }
+        
+        while(num > 0){
+            int digit = num % 10;
+            num = num / 10;
+            
+            if(digit == 0){
+                digit = 5;
+                ans = digit * mul + ans;
+                mul = mul * 10;
+            }
+            
+            else{
+                ans = digit * mul + ans;
+                mul = mul * 10;
+            }
+        }
+        
+        return ans;
+    }
+}
+
+// 023. Middle of Three -> 19 Sep 2025
+
+class Solution {
+    int middle(int a, int b, int c) {
+        int arr[] = new int[3];  // ✅ सही किया
+        arr[0] = a;
+        arr[1] = b;
+        arr[2] = c;
+
+        Arrays.sort(arr);
+
+        return arr[1];  // middle element return
+        
+    }
+}
+
 
