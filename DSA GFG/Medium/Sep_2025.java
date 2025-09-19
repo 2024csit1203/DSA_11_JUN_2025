@@ -36,3 +36,31 @@ class Solution {
         
     }
 }
+
+// 003. Container With Most Water -> 19 Sep 2025
+
+class Solution {
+    public int maxWater(int arr[]) {
+        // Code Here
+        int ans = 0;
+    int left = 0, right = arr.length - 1;
+
+    while (left < right) {
+        int height = Math.min(arr[left], arr[right]);
+        int distance = right - left;
+        int water = height * distance;
+
+        ans = Math.max(ans, water);
+
+        // जिस तरफ height छोटी है उसको move करो
+        if (arr[left] < arr[right]) {
+            left++;
+        } else {
+            right--;
+        }
+    }
+
+    return ans;
+        
+    }
+}
