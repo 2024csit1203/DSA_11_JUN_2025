@@ -282,4 +282,25 @@ class Solution {
     }
 }
 
+// 020. Reverse digits -> 19 Sep 2025
+
+class Solution {
+    public int reverseDigits(int n) {
+        // Code here
+        int ans = 0;
+        int mul = 10;
+        
+        while(n > 0){
+            int digit = n % 10;
+            n = n / 10;
+            
+            ans = ans * mul + digit;
+            
+        }
+        
+        return ans;
+        
+    }
+}
+
 
