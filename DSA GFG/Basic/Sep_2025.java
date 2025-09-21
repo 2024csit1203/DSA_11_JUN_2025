@@ -403,4 +403,108 @@ class Solution {
     }
 }
 
+// 026. Find the fine -> 22 Sep 2025
+
+class Solution {
+
+    public long totalFine(int date, int car[], int fine[]) {
+        // code here
+        long ans = 0;
+        
+        if(date % 2 == 0){
+            for(int i = 0; i < car.length; i++){
+                if(car[i] % 2 != 0){
+                    ans += fine[i];
+                }
+            }
+        }
+        else{
+            for(int i = 0; i < car.length; i++){
+                if(car[i] % 2 == 0){
+                    ans += fine[i];
+                }
+            }
+        }
+        
+        return ans;
+    }
+}
+
+// 027. Replace all 0's with 5 -> 22 Sep 2025
+
+class Solution {
+    public static int convertFive(int n) {
+        // add code here.
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        int ans = 0;
+        
+        while(n > 0){
+            int digit = n % 10;
+            if(digit == 0){
+                digit = 5;
+                list.add(digit);
+                
+            }
+            else{
+                list.add(digit);
+                
+            }
+            
+            n = n / 10;
+        }
+        
+        for(int i = list.size() - 1; i >= 0; i--){
+            ans = ans * 10 + list.get(i);
+        }
+        
+        return ans;
+        
+        
+    }
+}
+
+// 028. Print the Kth Digit -> 22 Sep 2025
+
+class Solution {
+    static long kthDigit(int a, int b, int k) {
+        // code here
+        long val = (long) Math.pow(a, b);
+        long ans = 0;
+        
+        while(val > 0){
+            k--;
+            if(k == 0){
+                long digit = val % 10;
+                ans = digit;
+                return ans;
+                
+            }
+            
+            val = val / 10;
+        }
+        
+        return 0;
+        
+        
+        
+    }
+}
+
+// 029. Number of divisors -> 22 Sep 2025
+
+class Solution {
+    static int countDivisors(int n) {
+        int count = 0;
+
+    for (int div = 1; div <= n; div++) {   // n तक जाना ज़रूरी है
+        if (n % div == 0 && div % 3 == 0) {
+            count++;
+        }
+    }
+
+    return count;
+    }
+}
+
 
