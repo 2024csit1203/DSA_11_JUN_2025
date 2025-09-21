@@ -365,4 +365,31 @@ class Solution {
     }
 }
 
+// 024. Sum of Digit is Palindrome or not -> 20 Sep 2025
+
+class Solution {
+    boolean isDigitSumPalindrome(int n) {
+       // Step 1: find sum of digits
+    int sum = 0;
+    int temp = n;
+    while (temp > 0) {
+        int digit = temp % 10;
+        sum += digit;
+        temp /= 10;
+    }
+
+    // Step 2: check if sum is palindrome
+    int original = sum;
+    int reverse = 0;
+    while (sum > 0) {
+        int digit = sum % 10;
+        reverse = reverse * 10 + digit;
+        sum /= 10;
+    }
+
+    // Step 3: return result
+    return original == reverse; 
+    }
+}
+
 
