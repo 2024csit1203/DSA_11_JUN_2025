@@ -392,4 +392,15 @@ class Solution {
     }
 }
 
+// 025. Series AP -> 21 Sep 2025
+
+class Solution {
+    public static int nthTermOfAP(int a1, int a2, int n) {
+        
+        int ans = a1 + (n - 1) * (a2 - a1);
+        
+        return ans;
+    }
+}
+
 
