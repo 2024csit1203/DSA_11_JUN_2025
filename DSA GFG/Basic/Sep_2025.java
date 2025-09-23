@@ -507,4 +507,14 @@ class Solution {
     }
 }
 
+// 030. Compound Interest -> 23 Sep 2025
+
+class Solution {
+    static int getCompundInterest(int P, int T, int N, int R) {
+        double CI = P * Math.pow((1 + (R / 100.0) / N), N * T);
+        return (int)(CI);
+        
+    }
+}
+
 
