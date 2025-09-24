@@ -517,4 +517,38 @@ class Solution {
     }
 }
 
+// 031. Finding Position -> 24 Sep 2025
+
+class Solution {
+    static long nthPosition(long n) {
+        long pos = 1;
+        while (pos * 2 <= n) {
+           pos *= 2;
+       }
+       return pos;
+    }
+}
+
+// 032. Smallest divisible number -> 24 Sep 2025
+
+class Solution {
+    public static long getSmallestDivNum(int n) {
+        long ans = 1;
+    for (int i = 2; i <= n; i++) {
+        ans = lcm(ans, i);
+    }
+    return ans;
+        
+    }
+    
+    private static long gcd(long a, long b) {
+    if (b == 0) return a;
+    return gcd(b, a % b);
+}
+
+private static long lcm(long a, long b) {
+    return (a / gcd(a, b)) * b;  // safe from overflow
+}
+}
+
 
