@@ -551,4 +551,43 @@ private static long lcm(long a, long b) {
 }
 }
 
+// 033. Find n-th term of series 1, 3, 6, 10, 15, 21 -> 25 Sep 2025
+
+class Solution {
+    static int findNthTerm(int n) {
+        // code here
+        int ans = 0;
+        
+        int diff = 1;
+        
+        for(int i = 1; i <= n; i++){
+            
+            ans = ans + diff;
+            
+            diff++;
+        }
+        
+        return ans;
+        
+    }
+};
+
+// 034. Mean of an Array -> 25 Sep 2025
+
+class Solution {
+    public static int findMean(int[] arr) {
+        // code here
+        int sum = 0;
+        int n = arr.length;
+        
+        for(int i = 0; i < arr.length; i++){
+            sum += arr[i];
+        }
+        
+        int ans = sum/(n);
+        
+        return ans;
+    }
+};
+
 
