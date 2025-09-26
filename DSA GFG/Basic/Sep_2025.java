@@ -590,4 +590,37 @@ class Solution {
     }
 };
 
+// 035. Cube root of a number -> 26 Sep 2025
+
+class Solution {
+    static int cubeRoot(int n) {
+        // code here
+        
+        return (int)(Math.pow(n, 1.0/3.0));
+        
+        
+    }
+};
+
+// 036. Repetitive Addition Of Digits -> 26 Sep 2025
+
+class Solution {
+    public int digitsum(int m) {
+        int sum = 0;
+        while (m > 0) {
+            sum += m % 10;
+            m /= 10;
+        }
+        return sum;
+    }
+    
+    public int singleDigit(int n) {
+       while (n >= 10) {   // keep reducing until single digit
+            n = digitsum(n);
+        }
+        return n;
+        
+    }
+}
+
 
