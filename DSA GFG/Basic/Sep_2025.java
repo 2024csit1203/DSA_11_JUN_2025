@@ -623,4 +623,114 @@ class Solution {
     }
 }
 
+// 039. Array Search -> 29 Sep 2025
+
+class Solution {
+    public int search(int arr[], int x) {
+        // code here
+        int index = -1;
+        
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] == x){
+                index = i;
+                break;
+            }
+        }
+        
+        return index;
+    }
+}
+
+// 040. Min and Max in Array -> 29 Sep 2025
+
+class Solution {
+    public ArrayList<Integer> getMinMax(int[] arr) {
+        // code Here
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        
+        list.add(min);
+        list.add(max);
+        
+        return list;
+        
+    }
+}
+
+// 041. Rotate Array by One -> 29 Sep 2025
+
+class Solution {
+    public void rotate(int[] arr) {
+        // code here
+        for(int i = arr.length-1; i > 0; i--){
+            int temp = arr[i];
+            arr[i] = arr[i-1];
+            arr[i-1] = temp;
+        }
+    }
+}
+
+// 042. Value equal to index value -> 29 Sep 2025
+
+class Solution {
+    public List<Integer> valueEqualToIndex(List<Integer> nums) {
+        // code here
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for(int i = 0; i < nums.size(); i++){
+            if(nums.get(i) == i+1){
+                list.add(nums.get(i));
+            }
+        }
+        
+        return list;
+    }
+}
+
+// 043. Alternates in an Array -> 29 Sep 2025
+
+class Solution {
+    // function to print alternate elements of an array
+    public ArrayList<Integer> getAlternates(int arr[]) {
+        // Code Here
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for (int i = 0; i < arr.length; i += 2) {
+            list.add(arr[i]);
+        }
+        
+        return list;
+    }
+}
+
+// 044. Searching in an Array -> 29 Sep 2025
+
+class Solution {
+    public int search(int k, ArrayList<Integer> arr) {
+        // code here
+        int ans = -1;
+        
+        for(int i = 0; i < arr.size(); i++){
+            if(arr.get(i) == k){
+                ans = i+1;
+                break;
+            }
+        }
+        
+        return ans;
+        
+    }
+}
+
 
