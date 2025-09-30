@@ -250,3 +250,24 @@ class Solution {
     }
 }
 
+// 012. Array Duplicates -> 30 Sep 2025
+
+class Solution {
+    public ArrayList<Integer> findDuplicates(int[] arr) {
+        ArrayList<Integer> list = new ArrayList<>();
+        HashSet<Integer> seen = new HashSet<>();
+        HashSet<Integer> duplicates = new HashSet<>();
+        
+        for (int num : arr) {
+            if (!seen.add(num)) {
+                // Already seen before → duplicate
+                duplicates.add(num);
+            }
+        }
+        
+        list.addAll(duplicates);
+        return list;
+        
+    }
+}
+
