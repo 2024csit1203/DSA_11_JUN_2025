@@ -173,3 +173,80 @@ class Solution {
     }
 }
 
+// 009. Missing in Array -> 29 Sep 2025
+
+class Solution {
+    int missingNum(int arr[]) {
+        // code here
+        Arrays.sort(arr);
+        int ans = -1;
+        
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] != i+1){
+                ans = i+1;
+                break;
+            }
+        }
+        
+        if(ans == -1){
+            ans = arr.length+1;
+        }
+        
+        return ans;
+    }
+}
+
+// 010. Second Largest -> 29 Sep 2025
+
+class Solution {
+    public int getSecondLargest(int[] arr) {
+        // code here
+        int ans = -1;
+        
+        int max = -1;
+        
+        for(int i = 0; i < arr.length; i++){
+            if(i == 0){
+                max = arr[i];
+            }
+            
+            if(arr[i] > max){
+                ans = max;
+                max = arr[i];
+            }
+            
+            else if(arr[i] > ans && arr[i] < max){
+                ans = arr[i];
+            }
+        }
+        
+        return ans;
+    }
+}
+
+// 011. Array Leaders -> 29 Sep 2025
+
+class Solution {
+    static ArrayList<Integer> leaders(int arr[]) {
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        int n = arr.length;
+        int maxFromRight = arr[n - 1];
+        
+        // The rightmost element is always a leader
+        list.add(maxFromRight);
+        
+        for (int i = n - 2; i >= 0; i--) {
+            if (arr[i] >= maxFromRight) {
+                maxFromRight = arr[i];
+                list.add(maxFromRight);
+            }
+        }
+        
+        // Leaders are collected in reverse order, so reverse the list
+        Collections.reverse(list);
+        
+        return list;
+    }
+}
+
