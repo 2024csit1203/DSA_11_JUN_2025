@@ -50,3 +50,20 @@ class Solution {
     return ans;
     }
 }
+
+// Find element at a given Index -> 04 Oct 2025
+
+class Solution {
+    public static int findElementAtIndex(int key, int[] arr) {
+        // code here
+        int ans = -1;
+        for(int i = 0; i < arr.length; i++){
+            if(i == key){
+                 ans =  arr[key];
+                 break;
+            }
+        }
+        
+        return ans;
+    }
+}
