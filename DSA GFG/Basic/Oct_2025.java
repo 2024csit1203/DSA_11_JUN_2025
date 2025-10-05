@@ -67,3 +67,32 @@ class Solution {
         return ans;
     }
 }
+
+// Smaller and Larger -> 05 Oct 2025
+
+class Solution {
+    int[] getMoreAndLess(int[] arr, int target) {
+        // code here
+        int x = target;
+        int count = 0;
+        int ans = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] < x){
+                count++;
+            }
+            else if (arr[i] == x){
+                count++;
+                ans++;
+            }
+            else{
+                ans++;
+            }
+        }
+        
+        
+        
+        int Arr1[] = {count, ans};
+        
+        return Arr1;
+    }
+}
