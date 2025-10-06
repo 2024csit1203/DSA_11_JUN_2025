@@ -96,3 +96,25 @@ class Solution {
         return Arr1;
     }
 }
+
+
+// Array Searching -> 06 Oct 2025
+
+class Solution {
+
+    static int search(int arr[], int x) {
+
+        // Your code here
+        int ans = -1;
+        
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] == x){
+                ans = i;
+                break;
+            }
+        }
+        
+        return ans;
+        
+    }
+}
