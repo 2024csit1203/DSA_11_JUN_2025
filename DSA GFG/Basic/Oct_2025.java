@@ -118,3 +118,14 @@ class Solution {
         
     }
 }
+
+// Maximum Element in Array -> 07 Oct 2025
+
+class Solution {
+    public static int largest(int[] arr) {
+        // code here
+        Arrays.sort(arr);
+        return arr[arr.length-1];
+        
+    }
+}
