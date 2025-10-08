@@ -129,3 +129,28 @@ class Solution {
         
     }
 }
+
+// Sum of alternate product -> 08 Oct 2025
+
+class Solution {
+    public int altProduct(int[] arr) {
+        Arrays.sort(arr);
+        
+        int start = 0;
+        
+        int end = arr.length-1;
+        
+        int ans = 0;
+        
+        while(start < end){
+            
+            ans += arr[start] * arr[end];
+            
+            start++;
+            
+            end--;
+        }
+        
+        return ans;
+    }
+}
