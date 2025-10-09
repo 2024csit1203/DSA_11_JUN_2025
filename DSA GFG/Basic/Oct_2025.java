@@ -154,3 +154,29 @@ class Solution {
         return ans;
     }
 }
+
+// Rearranging array -> 09 Oct 2025
+
+class Solution {
+    public static ArrayList<Integer> Rearrange(int[] arr) {
+        // code here
+        ArrayList<Integer> list = new ArrayList<>();
+        Arrays.sort(arr);
+        
+        int startindex = 0;
+        int endindex = arr.length - 1;
+        
+        while(startindex < endindex){
+            list.add(arr[startindex]);
+            list.add(arr[endindex]);
+            startindex++;
+            endindex--;
+        }
+        
+        if(startindex == endindex){
+            list.add(arr[startindex]);
+        }
+        
+        return list;
+    }
+}
