@@ -180,3 +180,32 @@ class Solution {
         return list;
     }
 }
+
+// Merge and Sort -> 10 Oct 2025
+
+class Solution {
+    public ArrayList<Integer> mergeNsort(int[] arr1, int[] arr2) {
+        // code here
+         ArrayList<Integer> list = new ArrayList<>();
+    
+    // Add elements from the first array
+    for (int i = 0; i < arr1.length; i++) {
+        if (!list.contains(arr1[i])) {
+            list.add(arr1[i]);
+        }
+    }
+    
+    // Add elements from the second array
+    for (int j = 0; j < arr2.length; j++) {
+        if (!list.contains(arr2[j])) {  // Corrected from brr[i] to brr[j]
+            list.add(arr2[j]);
+        }
+    }
+    
+    // Sort the ArrayList
+    Collections.sort(list);
+    
+    return list;
+        
+    }
+}
