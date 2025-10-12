@@ -229,3 +229,27 @@ class Solution {
         return true;
     }
 }
+
+// Longest Increasing Subarray -> 12 Oct 2025
+
+class Solution {
+    public int lenOfLongIncSubArr(List<Integer> arr) {
+    if (arr == null || arr.isEmpty()) return 0;
+
+    int ans = 1;
+    int num = 1;
+
+    for (int i = 1; i < arr.size(); i++) {
+        if (arr.get(i) > arr.get(i - 1)) {
+            num++;
+        } else {
+            ans = Math.max(ans, num);
+            num = 1;
+        }
+    }
+
+    ans = Math.max(ans, num); // In case the longest subarray is at the end
+    return ans;
+    }
+}
+
