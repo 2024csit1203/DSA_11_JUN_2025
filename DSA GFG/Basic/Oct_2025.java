@@ -253,3 +253,18 @@ class Solution {
     }
 }
 
+// Multiply Array -> 13 Oct 2025
+
+class Solution {
+
+    public static int product(int arr[], int n) {
+        int ans = 1;
+
+    for (int i = 0; i < n; i++) {
+        ans *= arr[i];   // multiply cumulatively
+    }
+
+    return ans;
+    }
+}
+
