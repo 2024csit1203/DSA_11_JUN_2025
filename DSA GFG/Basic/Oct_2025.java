@@ -268,3 +268,42 @@ class Solution {
     }
 }
 
+// Count number of elements between two given elements in array -> 14 Oct 2025
+
+class Solution {
+    // Function to get the count of elements between num1 and num2 in array arr.
+    public int getCount(ArrayList<Integer> arr, int num1, int num2) {
+        int start = -1;
+    int end = -1;
+
+    // Find the first occurrence of num1
+    for (int i = 0; i < arr.size(); i++) {
+        if (arr.get(i) == num1) {
+            start = i;
+            break;
+        }
+    }
+
+    // If num1 not found, return 0
+    if (start == -1) {
+        return 0;
+    }
+
+    // Find the first occurrence of num2 after num1
+    for (int i = start + 1; i < arr.size(); i++) {
+        if (arr.get(i) == num2) {
+            end = i;
+           
+        }
+    }
+
+    // If num2 not found after num1, return 0
+    if (end == -1) {
+        return 0;
+    }
+
+    // Count elements between num1 and num2
+    return end - start - 1;
+    }
+}
+
