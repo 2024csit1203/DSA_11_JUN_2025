@@ -307,3 +307,23 @@ class Solution {
     }
 }
 
+// Sum of distinct elements -> 15 Oct 2025
+
+class Solution {
+    int findSum(int arr[]) {
+        // code here
+        int sum = 0;
+        Arrays.sort(arr);
+        for(int i = 0; i < arr.length; i++){
+            if(i == 0){
+                sum = arr[i];
+            }
+            else if(arr[i] != arr[i-1]){
+                sum += arr[i];
+            }
+        }
+        
+        return sum;
+    }
+}
+
