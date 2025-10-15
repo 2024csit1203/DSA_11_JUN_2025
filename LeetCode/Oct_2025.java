@@ -72,3 +72,19 @@ class Solution {
     return nums[nums.length - 1]; 
     }
 }
+
+// 217. Contains Duplicate -> 15 Oct 2025
+
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        Arrays.sort(nums);
+
+        for(int i = 0; i < nums.length - 1; i++){
+            if(nums[i] == nums[i+1]){
+                return true;
+            }
+        }
+
+        return false;
+    }
+}
