@@ -88,3 +88,23 @@ class Solution {
         return false;
     }
 }
+
+// 268. Missing Number -> 16 Oct 2025
+
+class Solution {
+    public int missingNumber(int[] nums) {
+        int ans = -1;
+
+        Arrays.sort(nums);
+
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] != i){
+                return i;
+            }
+        }
+
+        ans = nums.length;
+
+        return ans;
+    }
+}
