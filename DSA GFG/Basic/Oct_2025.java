@@ -345,3 +345,37 @@ class Solution {
     }
 }
 
+// Maximum product of two numbers -> 17 Oct 2025
+
+class Solution {
+    public static int maxProduct(int[] arr) {
+       if (arr.length < 2)
+            return 0; // not enough elements
+
+        int max1 = Integer.MIN_VALUE, max2 = Integer.MIN_VALUE;
+        int min1 = Integer.MAX_VALUE, min2 = Integer.MAX_VALUE;
+
+        for (int num : arr) {
+            // update largest
+            if (num > max1) {
+                max2 = max1;
+                max1 = num;
+            } else if (num > max2) {
+                max2 = num;
+            }
+
+            // update smallest
+            if (num < min1) {
+                min2 = min1;
+                min1 = num;
+            } else if (num < min2) {
+                min2 = num;
+            }
+        }
+
+        // best product among both cases
+        return Math.max(max1 * max2, min1 * min2);
+    }
+}
+
+
