@@ -128,3 +128,25 @@ class Solution {
     }
 }
 }
+
+// 414. Third Maximum Number -> 19 Oct 2025
+
+class Solution {
+    public int thirdMax(int[] nums) {
+       Arrays.sort(nums);
+        int distinctCount = 1; // start with 1st distinct number
+
+        // Traverse from right (largest) to left (smallest)
+        for (int i = nums.length - 1; i > 0; i--) {
+            if (nums[i] != nums[i - 1]) {
+                distinctCount++;
+                if (distinctCount == 3) {
+                    return nums[i - 1]; // third distinct max found
+                }
+            }
+        }
+
+        // If less than 3 distinct numbers, return the largest
+        return nums[nums.length - 1];
+    }
+}
