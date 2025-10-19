@@ -407,4 +407,31 @@ class Solution {
     }
 }
 
+// Balanced Array -> 19 Oct 2025
+
+class Solution {
+    // Function to find the minimum value required to balance the array.
+    public int minValueToBalance(List<Integer> arr) {
+        // code here
+        int n = arr.size();
+        int leftsum = 0;
+        
+        int rightsum = 0;
+        
+        for(int i = 0; i < n; i++){
+            if(i < n/2){
+                leftsum += arr.get(i);
+            }
+            
+            else{
+                rightsum += arr.get(i);
+            }
+        }
+        
+        int ans = Math.abs(leftsum - rightsum);
+        
+        return ans;
+    }
+}
+
 
