@@ -150,3 +150,25 @@ class Solution {
         return nums[nums.length - 1];
     }
 }
+
+
+class Solution {
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        List<Integer> ans = new ArrayList<>();
+        Set<Integer> set = new HashSet<>();
+
+        // Add all numbers to the set
+        for (int num : nums) {
+            set.add(num);
+        }
+
+        // Check for missing numbers from 1 to n
+        for (int i = 1; i <= nums.length; i++) {
+            if (!set.contains(i)) {
+                ans.add(i);
+            }
+        }
+
+        return ans;
+    }
+}
