@@ -434,4 +434,22 @@ class Solution {
     }
 }
 
+// 064. First 1 in a Sorted Binary Array -> 20 Oct 2025
+
+class Solution {
+
+    public long firstIndex(int arr[]) {
+        // Your code goes here
+        long ans = -1;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] == 1){
+                ans = i;
+                break;
+            }
+        }
+        
+        return ans;
+    }
+}
+
 
