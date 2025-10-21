@@ -452,4 +452,29 @@ class Solution {
     }
 }
 
+// 065. Multiply left and right array sum -> 21 Oct 2025
+
+class Solution {
+    public int multiply(int[] arr) {
+        // code here
+         // code here
+        int ans = 1;
+        int n = arr.length/2;
+        int num1 = 0;
+        int num2 = 0;
+        
+        for(int i = 0; i < n; i++){
+            num1 += arr[i];
+        }
+        
+        for(int i = n; i < arr.length; i++){
+            num2 += arr[i];
+        }
+        
+        ans = num1 * num2;
+        
+        return ans;
+    }
+}
+
 
