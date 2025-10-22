@@ -477,4 +477,29 @@ class Solution {
     }
 }
 
+// 066. At least two greater elements -> 22 Oct 2025
+
+class Solution {
+    public long[] findElements(long arr[]) {
+        // If array has less than 3 elements, return empty array
+        if (arr.length <= 2) {
+            return new long[0];
+        }
+
+        long ans[] = new long[arr.length - 2];
+        
+
+        // Corrected sorting syntax
+        Arrays.sort(arr);
+        
+
+        for (int i = 0; i < arr.length-2; i++) {
+            
+            ans[i] = arr[i];
+        }
+
+        return ans;
+    }
+}
+
 
