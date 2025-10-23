@@ -502,4 +502,21 @@ class Solution {
     }
 }
 
+// 067. Ishaan Loves Chocolates -> 23 Oct 2025
+
+class Solution {
+    public static int chocolates(int n, int[] arr) {
+        // code here
+        int ans = Integer.MAX_VALUE;
+        
+        for(int i = 0; i < n; i++){
+            if(arr[i] < ans){
+                ans = arr[i];
+            }
+        }
+        
+        return ans;
+    }
+}
+
 
