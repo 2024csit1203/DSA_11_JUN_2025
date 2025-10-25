@@ -519,4 +519,15 @@ class Solution {
     }
 }
 
+// 068. Array insert at end -> 25 Oct 2025
+
+class Solution {
+    public void insertAtEnd(ArrayList<Integer> arr, int val) {
+        // code here
+        
+        arr.add(val);
+        
+    }
+}
+
 
