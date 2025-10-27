@@ -530,6 +530,27 @@ class Solution {
     }
 }
 
+// 069. Elements in the Range -> 26 Oct 2025
+
+class Solution {
+    boolean check_elements(int arr[], int n, int A, int B) {
+        HashSet<Integer> set = new HashSet<>();
+
+        // Add all numbers within range [A, B] to set
+        for (int i = 0; i < n; i++) {
+            if (arr[i] >= A && arr[i] <= B) {
+                set.add(arr[i]);
+            }
+        }
+
+        // Number of elements expected in [A, B] is (B - A + 1)
+        int expectedCount = B - A + 1;
+
+        // If set size matches expectedCount → all elements are present
+        return set.size() == expectedCount;
+    }
+}
+
 // 070. Palindrome Array -> 27 Oct 2025
 
 class Solution {
