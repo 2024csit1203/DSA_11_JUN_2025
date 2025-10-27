@@ -530,4 +530,34 @@ class Solution {
     }
 }
 
+// 070. Palindrome Array -> 27 Oct 2025
+
+class Solution {
+    public static boolean isPerfect(int[] arr) {
+        // code here
+        // code here
+        int n = arr.length;
+        int Arr1[] = new int[n];
+        int j = 0;
+        for(int i = n-1; i >=0; i--){
+            Arr1[j] = arr[i];
+            j++;
+        }
+        String ans = "PERFECT";
+        for(int i = 0; i < n; i++){
+            if(Arr1[i] != arr[i]){
+                ans = "NOTPERFECT";
+                break;
+            }
+        }
+        if(ans == "PERFECT"){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+}
+
 
