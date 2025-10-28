@@ -581,4 +581,23 @@ class Solution {
     }
 }
 
+// 071. One odd Occuring -> 28 Oct 2025
+
+class Solution {
+    // Method to find the element with odd occurrence in given array
+    int getOddOccurrence(int[] arr) {
+        // code here
+        // code here
+        int result = 0;
+        
+        // XOR all the elements
+        for (int i = 0; i < arr.length; i++) {
+            result ^= arr[i];
+        }
+        
+        return result;
+        
+    }
+}
+
 
