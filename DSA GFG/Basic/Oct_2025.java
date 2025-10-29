@@ -600,4 +600,24 @@ class Solution {
     }
 }
 
+// Array Subset -> 29 Oct 2025
 
+class Solution {
+    public boolean isSubset(int a[], int b[]) {
+       Arrays.sort(a);
+        Arrays.sort(b);
+        
+        int i = 0, j = 0;
+        while (i < a.length && j < b.length) {
+            if (a[i] == b[j]) {
+                i++;
+                j++;
+            } else if (a[i] < b[j]) {
+                i++;
+            } else {
+                return false; // element of b not found in a
+            }
+        }
+        return j == b.length;
+    }
+}
