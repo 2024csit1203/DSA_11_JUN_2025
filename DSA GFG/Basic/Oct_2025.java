@@ -600,7 +600,7 @@ class Solution {
     }
 }
 
-// Array Subset -> 29 Oct 2025
+// 072. Array Subset -> 29 Oct 2025
 
 class Solution {
     public boolean isSubset(int a[], int b[]) {
@@ -622,7 +622,7 @@ class Solution {
     }
 }
 
-// Palindromic Array -> 30 Oct 2025
+// 073. Palindromic Array -> 30 Oct 2025
 
 class Solution {
     public static boolean isPalinArray(int[] arr) {
