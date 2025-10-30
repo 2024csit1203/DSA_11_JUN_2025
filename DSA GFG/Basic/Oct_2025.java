@@ -621,3 +621,26 @@ class Solution {
         return j == b.length;
     }
 }
+
+// Palindromic Array -> 30 Oct 2025
+
+class Solution {
+    public static boolean isPalinArray(int[] arr) {
+        // add code here.
+                  int count = 1;
+                  for(int i = 0; i < arr.length; i++){
+                      String str = Integer.toString(arr[i]);
+                      String nstr = "";
+                      for(int j = 0; j < str.length(); j++){
+                          char ch = str.charAt(j);
+                          nstr = ch + nstr;
+                      }
+                      int val = Integer.valueOf(nstr);
+                      if(val != arr[i]){
+                          return false;
+                      }
+                      
+                  }
+                  return true;
+    }
+}
