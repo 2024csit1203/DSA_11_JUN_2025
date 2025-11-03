@@ -43,3 +43,15 @@ class Solution {
         }
     }
 }
+
+// 077. Print Elements of Array -> 03 Nov 2025
+
+class Solution {
+    // Just print the space seperated array elements
+    void printArray(int arr[]) {
+        //   code here
+         for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
