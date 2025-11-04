@@ -55,3 +55,20 @@ class Solution {
         }
     }
 }
+
+// 078. Display longest name -> 04 Nov 2025
+
+class Solution {
+    public String longest(List<String> arr) {
+        // code here
+        String ans = "";
+
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(i).length() > ans.length()) {
+                ans = arr.get(i);
+            }
+        }
+        return ans;
+    }
+}
+
