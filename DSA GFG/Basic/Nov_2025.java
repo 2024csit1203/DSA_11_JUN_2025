@@ -72,3 +72,16 @@ class Solution {
     }
 }
 
+// 079. Swap kth elements -> 06 Nov 2025
+
+class Solution {
+    public void swapKth(List<Integer> arr, int k) {
+        int n = arr.size();
+        
+        // swap kth element from start and end
+        int temp = arr.get(k - 1);
+        arr.set(k - 1, arr.get(n - k));
+        arr.set(n - k, temp);
+    }
+}
+
