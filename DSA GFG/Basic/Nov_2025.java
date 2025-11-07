@@ -85,3 +85,29 @@ class Solution {
     }
 }
 
+// 080. Quick Left Rotation -> 07 Nov 2025
+
+class Solution {
+    void leftRotate(int arr[], int k) {
+        int n = arr.length;
+        k = k % n; // handle if k > n
+        
+        // Reverse first k elements
+        reverse(arr, 0, k - 1);
+        // Reverse remaining n-k elements
+        reverse(arr, k, n - 1);
+        // Reverse the whole array
+        reverse(arr, 0, n - 1);
+    }
+    
+    void reverse(int arr[], int start, int end) {
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+}
+
