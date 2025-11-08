@@ -111,3 +111,22 @@ class Solution {
     }
 }
 
+// 081. Game with nos -> 08 Nov 2025
+
+class Complete {
+
+    // Function for finding maximum and value pair
+    public static int[] game_with_number(int arr[], int n) {
+        // Complete the function
+        int result[] = new int[arr.length];
+        
+        for(int i = 0; i < arr.length-1; i++){
+            result[i] = arr[i] ^ arr[i+1];
+        }
+        
+        result[arr.length -1] = arr[arr.length -1];
+        
+        return result;
+    }
+}
+
