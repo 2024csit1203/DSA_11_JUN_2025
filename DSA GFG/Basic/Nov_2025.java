@@ -245,3 +245,25 @@ class Solution {
     }
 }
 
+// 089. Reverse sub array -> 10 Nov 2025
+
+class Solution {
+    public static ArrayList<Integer> reverseSubArray(ArrayList<Integer> arr, int l,
+                                                     int r) {
+        // Convert l, r to 0-based indices (if they are 1-based)
+    l--; 
+    r--;
+
+    // Reverse the subarray in-place
+    while (l < r) {
+        int temp = arr.get(l);
+        arr.set(l, arr.get(r));
+        arr.set(r, temp);
+        l++;
+        r--;
+    }
+
+    return arr;
+    }
+}
+
