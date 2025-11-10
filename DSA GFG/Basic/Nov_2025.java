@@ -193,3 +193,19 @@ class Solution {
     }
 }
 
+// 087. Remove Duplicates from unsorted array -> 10 Nov 2025
+
+class Solution {
+
+    static ArrayList<Integer> removeDuplicate(int arr[]) {
+         // Using LinkedHashSet to preserve insertion order
+        Set<Integer> set = new LinkedHashSet<>();
+
+        for (int num : arr) {
+            set.add(num); // Duplicate values automatically ignored
+        }
+
+        return new ArrayList<>(set);
+    }
+}
+
