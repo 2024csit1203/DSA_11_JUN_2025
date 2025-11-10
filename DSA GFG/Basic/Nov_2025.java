@@ -155,3 +155,29 @@ class Solution {
     }
 }
 
+// 083. Alternative Sorting -> 10 Nov 2025
+
+class Solution {
+    public static ArrayList<Integer> alternateSort(int[] arr) {
+        Arrays.sort(arr);
+        ArrayList<Integer> list = new ArrayList<>();
+        int start = 0;
+        int end = arr.length -1;
+        
+        while(start < end){
+            list.add(arr[end]);
+            list.add(arr[start]);
+            
+            end--;
+            start++;
+        }
+        
+        if(start == end){
+            list.add(arr[start]);
+        }
+        
+         return list;
+        
+    }
+}
+
