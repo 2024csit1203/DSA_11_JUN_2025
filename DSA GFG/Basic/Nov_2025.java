@@ -209,3 +209,39 @@ class Solution {
     }
 }
 
+// 088. Segregate Even and Odd numbers -> 10 Nov 2025
+
+class Solution {
+    void segregateEvenOdd(int arr[]) {
+        // code here
+        Arrays.sort(arr);
+        
+        //ArayList<Integer> list = new ArrayList<>();
+        
+        ArrayList<Integer> even = new ArrayList<>();
+        
+        ArrayList<Integer> odd = new ArrayList<>();
+        
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] % 2 == 0){
+                even.add(arr[i]);
+            }
+            else{
+                odd.add(arr[i]);
+            }
+        }
+        
+        int index = 0;
+        
+        for(int j = 0; j < even.size(); j++){
+            arr[index] = even.get(j);
+            index++;
+        }
+        
+        for(int k = 0; k < odd.size(); k++){
+            arr[index] = odd.get(k);
+            index++;
+        }
+    }
+}
+
