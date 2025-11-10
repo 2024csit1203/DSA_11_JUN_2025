@@ -181,3 +181,15 @@ class Solution {
     }
 }
 
+// 084. Fighting the darkness -> 10 Nov 2025
+
+class Solution {
+    long maxDays(int arr[]) {
+        // code here
+        Arrays.sort(arr);
+        
+        return arr[arr.length-1];
+        
+    }
+}
+
