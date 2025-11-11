@@ -267,3 +267,41 @@ class Solution {
     }
 }
 
+// 090. Type of array -> 11 Nov 2025
+
+class Solution {
+    int maxNtype(int arr[]) {
+         // code here
+        int ascendingCount = 0;
+    int descendingCount = 0;
+    
+
+    // Count ascending and descending transitions
+    for (int i = 1; i < arr.length; i++) {
+        if (arr[i - 1] < arr[i]) {
+            ascendingCount++;
+           
+            
+        } else if (arr[i - 1] > arr[i]) {
+            descendingCount++;
+            
+        }
+    }
+
+    // Check for strictly ascending
+    if (ascendingCount == arr.length - 1) {
+        return 1; // Strictly ascending
+    }
+    // Check for strictly descending
+    else if (descendingCount == arr.length - 1) {
+        return 2; // Strictly descending
+    }
+    // Mixed sequence starting with ascending if first transition is upward
+    else if (ascendingCount > descendingCount) {
+        return 4;
+    }
+    // Mixed sequence starting with descending if first transition is downward
+    return 3;
+        
+    }
+}
