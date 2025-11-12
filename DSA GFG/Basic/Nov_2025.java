@@ -305,3 +305,44 @@ class Solution {
         
     }
 }
+
+// 091. Positive and negative elements -> 12 Nov 2025
+
+// User function Template for Java
+
+class Solution {
+    ArrayList<Integer> arranged(ArrayList<Integer> arr) {
+        // code here
+        ArrayList<Integer> pos = new ArrayList<>();
+        ArrayList<Integer> neg = new ArrayList<>();
+        
+        for(int i = 0; i < arr.size(); i++){
+            if(arr.get(i) >= 0){
+                pos.add(arr.get(i));
+            }
+            else{
+                neg.add(arr.get(i));
+            }
+        }
+        
+        ArrayList<Integer> ans = new ArrayList<>();
+        
+        int n = arr.size();
+        int posindex = 0;
+        int negindex = 0;
+        
+        for(int i = 0; i < n; i++){
+            if(i % 2 == 0){
+                ans.add(pos.get(posindex));
+                posindex++;
+            }
+            else{
+                ans.add(neg.get(negindex));
+                negindex++;
+            }
+        }
+        
+        return ans;
+        
+    }
+}
