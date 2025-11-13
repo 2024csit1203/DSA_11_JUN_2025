@@ -346,3 +346,35 @@ class Solution {
         
     }
 }
+
+// 092. Java 1-d and 2-d Array -> 13 Nov 2025
+
+class Complete {
+    public static ArrayList<Integer> array(int a[][], int b[], int n) {
+        // Complete the function
+        int sum = 0;
+        int num = 0;
+        
+        for(int i = 0; i < a.length; i++){
+            for(int j = 0; j < a.length; j++){
+                if(i == j){
+                    sum += a[i][j];
+                }
+            }
+        }
+        
+        for(int i = 0; i < b.length; i++){
+            if(num < b[i]){
+                num = b[i];
+            }
+        }
+        
+        ArrayList<Integer> ans = new ArrayList<>();
+        
+        ans.add(sum);
+        ans.add(num);
+        
+        return ans;
+        
+    }
+}
