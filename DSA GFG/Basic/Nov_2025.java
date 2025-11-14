@@ -378,3 +378,39 @@ class Complete {
         
     }
 }
+
+// 093. Absolute Difference of 1 -> 14 Nov 2025
+
+class Solution {
+    public ArrayList<Integer> getDigitDiff1AndLessK(int[] arr, int k) {
+        // code here
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for (int num : arr) {
+            
+            if (num < k) {
+                // Check adjacent digit differences
+                int temp = num;
+                boolean valid = true;
+                
+                while (temp >= 10) {
+                    int d1 = temp % 10;       // last digit
+                    int d2 = (temp / 10) % 10; // next digit
+                    
+                    if (Math.abs(d1 - d2) != 1) {
+                        valid = false;
+                        break;
+                    }
+                    temp /= 10;   // move left
+                }
+                
+                if (valid && num >= 10) {
+                    list.add(num);
+                }
+            }
+        }
+        
+        return list;
+        
+    }
+}
