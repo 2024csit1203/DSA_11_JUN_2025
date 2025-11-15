@@ -414,3 +414,37 @@ class Solution {
         
     }
 }
+
+// 094. Make a Distinct Digit Array -> 15 Nov 2025
+
+class Solution {
+    public int[] common_digits(int[] nums) {
+         ArrayList<Integer> list = new ArrayList<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
+
+            while (num > 0) {
+                int digit = num % 10;
+
+                // contains() spelling fix
+                if (!list.contains(digit)) {
+                    list.add(digit);
+                }
+
+                num = num / 10;
+            }
+        }
+
+        // Convert ArrayList<Integer> to int[]
+        int[] arr = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            arr[i] = list.get(i);
+        }
+        
+        Arrays.sort(arr);
+
+        return arr;
+        
+    }
+}
