@@ -448,3 +448,22 @@ class Solution {
         
     }
 }
+
+// 095. The problem of identical arrays -> 16 Nov 2025
+
+class Solution {
+    public boolean isIdentical(List<Integer> a, List<Integer> b) {
+        // Your code goes here.
+        Collections.sort(a);
+        
+        Collections.sort(b);
+        
+        for(int i = 0; i < a.size(); i++){
+            if(a.get(i) != b.get(i)){
+                return false;
+            }
+        }
+        
+        return true;
+    }
+}
