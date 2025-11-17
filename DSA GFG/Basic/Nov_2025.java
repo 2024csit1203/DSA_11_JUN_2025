@@ -467,3 +467,22 @@ class Solution {
         return true;
     }
 }
+
+// 096. Last duplicate element in a sorted array -> 17 Nov 2025
+
+class Solution {
+    public int[] dupLastIndex(int[] arr) {
+        // Complete the function
+        Arrays.sort(arr);
+        int ans[] = {-1, -1};
+        for(int i = arr.length - 1; i > 0; i--){
+            if(arr[i] == arr[i-1]){
+                ans[0] = i;
+                ans[1] = arr[i];
+                break;
+            }
+        }
+        
+        return ans;
+    }
+}
