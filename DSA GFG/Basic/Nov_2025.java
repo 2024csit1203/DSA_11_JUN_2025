@@ -524,3 +524,24 @@ class Solution {
     }
 }
 
+// 099. Maximum triplet sum in array -> 19 Nov 2025
+
+class Solution {
+    // Function to find the maximum triplet sum in the array.
+    public int maxTripletSum(List<Integer> arr) {
+        // Complete the function
+        Collections.sort(arr);
+        int count = 0;
+        int ans = 0;
+        
+        for(int i = arr.size() - 1; i >= 0; i--){
+            count++;
+            if(count <= 3){
+                ans += arr.get(i);
+            }
+        }
+        
+        return ans;
+    }
+}
+
