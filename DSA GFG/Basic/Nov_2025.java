@@ -486,3 +486,21 @@ class Solution {
         return ans;
     }
 }
+
+// 097. Sum Array Puzzle -> 18 Nov 2025
+
+class Solution {
+    public void sumArray(List<Integer> arr) {
+        int totalSum = 0;
+
+    // Step 1: Calculate total sum
+    for (int x : arr) {
+        totalSum += x;
+    }
+
+    // Step 2: Replace each element with sum of others
+    for (int i = 0; i < arr.size(); i++) {
+        arr.set(i, totalSum - arr.get(i));
+       }
+    }
+}
