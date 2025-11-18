@@ -577,3 +577,38 @@ class Solution {
     }
 }
 
+// 101. Sort first half in ascending and second half in descending -> 19 Nov 2025
+
+class Solution {
+    public ArrayList<Integer> customSort(int[] arr) {
+        // your code
+        int n = arr.length/2;
+        
+        ArrayList<Integer> first = new ArrayList<>();
+        ArrayList<Integer> second = new ArrayList<>();
+        
+        for(int i = 0; i < n; i++){
+            first.add(arr[i]);
+        }
+        
+        for(int i = n; i < arr.length; i++){
+            second.add(arr[i]);
+        }
+        
+        Collections.sort(first);
+        Collections.sort(second);
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for(int i = 0; i < first.size(); i++){
+            list.add(first.get(i));
+        }
+        
+        for(int i = second.size() - 1; i >= 0; i--){
+            list.add(second.get(i));
+        }
+        
+        return list;
+    }
+}
+
