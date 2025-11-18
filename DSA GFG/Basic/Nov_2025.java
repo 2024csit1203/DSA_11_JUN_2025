@@ -545,3 +545,35 @@ class Solution {
     }
 }
 
+// 100. Smallest number repeating K times -> 19 Nov 2025
+
+class Solution {
+    public int findDuplicate(int[] arr, int k) {
+        // code here
+        int count = 1;
+        Arrays.sort(arr);
+
+        if(arr.length == 1 && k == 1){
+            return arr[0];
+        }
+
+        for(int i = 1; i < arr.length; i++){
+            if(arr[i] == arr[i - 1]){
+                count++;
+            } else {
+                if(count == k){
+                    return arr[i - 1];   // correct place to return
+                }
+                count = 1; // reset count
+            }
+        }
+
+        // ⭐ Loop ke baad last element ke liye check
+        if(count == k){
+            return arr[arr.length - 1];
+        }
+
+        return -1;
+    }
+}
+
