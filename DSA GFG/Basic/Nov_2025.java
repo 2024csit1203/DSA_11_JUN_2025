@@ -504,3 +504,23 @@ class Solution {
        }
     }
 }
+
+// 098. Jay's Apples -> 19 Nov 2025
+
+class Solution {
+    public int minimumApple(int[] arr) {
+        // Complete the function
+        Arrays.sort(arr);
+        int ans = 1;
+        
+        for(int i = 1; i < arr.length; i++){
+            if(arr[i] != arr[i-1]){
+                ans++;
+            }
+        }
+        
+        return ans;
+        
+    }
+}
+
