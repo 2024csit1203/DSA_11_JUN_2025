@@ -674,3 +674,46 @@ class Solution {
     }
 }
 
+// 105. Minimum sum of two elements from two arrays -> 20 Nov 2025
+
+class Solution {
+    public int minSum(int[] arr1, int[] arr2) {
+        int n = arr1.length;
+        
+        int min1 = Integer.MAX_VALUE, min1Index = -1;
+        int secMin1 = Integer.MAX_VALUE;
+        
+        for(int i = 0; i < n; i++){
+            if(arr1[i] < min1){
+                secMin1 = min1;
+                min1 = arr1[i];
+                min1Index = i;
+            }
+            else if(arr1[i] < secMin1){
+                secMin1 = arr1[i];
+            }
+        }
+        
+        int min2 = Integer.MAX_VALUE, min2Index = -1;
+        int secMin2 = Integer.MAX_VALUE;
+        
+        for(int i = 0; i < n; i++){
+            if(arr2[i] < min2){
+                secMin2 = min2;
+                min2 = arr2[i];
+                min2Index = i;
+            }
+            else if(arr2[i] < secMin2){
+                secMin2 = arr2[i];
+            }
+        }
+        
+        if(min1Index != min2Index){
+            return min1 + min2;
+        }
+        
+        return Math.min(min1 + secMin2, min2 + secMin1);
+    }
+}
+
+
