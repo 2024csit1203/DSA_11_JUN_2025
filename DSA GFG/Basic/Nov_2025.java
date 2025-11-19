@@ -649,3 +649,28 @@ class Solution {
     }
 }
 
+// 104. Average Count Array -> 20 Nov 2025
+
+class Solution {
+
+    // Function for finding maximum and value pair
+    public ArrayList<Integer> countArray(int[] arr, int x) {
+        // Complete the function
+        HashMap<Integer, Integer> frequencyMap = new HashMap<>();
+        
+        for(int num : arr){
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for(int i = 0; i < arr.length; i++){
+            int num = (arr[i] + x) / 2;
+            
+            list.add(frequencyMap.getOrDefault(num, 0));
+        }
+        
+        return list;
+    }
+}
+
