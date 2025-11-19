@@ -631,3 +631,21 @@ class Solution {
     }
 }
 
+// 103. Largest product -> 20 Nov 2025
+
+class Solution {
+    public int findMaxProduct(int[] arr, int k) {
+        // code here
+        int maxProduct = Integer.MIN_VALUE;
+        int n = arr.length;
+        for (int i = 0; i <= n - k; i++) {
+            int product = 1;
+            for (int j = i; j < i + k; j++) {
+                product *= arr[j];
+            }
+            maxProduct = Math.max(maxProduct, product);
+        }
+        return maxProduct;
+    }
+}
+
