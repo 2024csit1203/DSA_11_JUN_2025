@@ -806,4 +806,19 @@ class Solution {
     }
 }
 
+// 110. Tough Competitors -> 21 Nov 2025
+
+class Solution {
+    public int minDiff(int[] arr) {
+        Arrays.sort(arr);
+        int ans = Integer.MAX_VALUE;
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            ans = Math.min(ans, arr[i+1] - arr[i]);
+        }
+        return ans;
+    }
+}
+
+
 
