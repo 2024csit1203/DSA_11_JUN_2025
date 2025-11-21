@@ -759,4 +759,21 @@ class Solution {
     }
 }
 
+// 108. Repeated IDs -> 21 Nov 2025
+
+class Solution {
+    public ArrayList<Integer> uniqueId(int[] arr) {
+        //  code here
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for(int i = 0; i < arr.length; i++){
+            if(!list.contains(arr[i])){
+                list.add(arr[i]);
+            }
+        }
+        
+        return list;
+    }
+}
+
 
