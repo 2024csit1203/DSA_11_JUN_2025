@@ -716,4 +716,23 @@ class Solution {
     }
 }
 
+// 106. Maximum Perimeter of Triangle from array -> 21 Nov 2025
+
+class Solution {
+    public int maxPerimeter(int[] arr) {
+        // code here
+        Arrays.sort(arr);
+        int c = arr[arr.length-1];
+        int b = arr[arr.length-2];
+        int a = arr[arr.length-3];
+        
+        if(a <= b && b <= c){
+            if(a + b > c){
+                return a + b + c;
+            }
+        }
+        return -1;
+    }
+}
+
 
