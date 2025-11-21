@@ -735,4 +735,28 @@ class Solution {
     }
 }
 
+// 107. Shortest un-ordered subarray -> 21 Nov 2025
+
+class Solution {
+
+    public int shortestUnorderedSubarray(int arr[]) {
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i = 0; i < arr.length; i++){
+            list.add(arr[i]);
+        }
+        
+        Collections.sort(list);
+        
+        int count = 0;
+        
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] != list.get(i)){
+                count++;
+            }
+        }
+        
+        return count;  
+    }
+}
+
 
