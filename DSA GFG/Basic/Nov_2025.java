@@ -776,4 +776,34 @@ class Solution {
     }
 }
 
+// 109. Countries at war -> 21 Nov 2025
+
+class Solution {
+    public String countryAtWar(int[] arr1, int[] arr2) {
+        //  code here
+        int A = 0;
+        int B = 0;
+        
+        for(int i = 0; i < arr1.length; i++){
+            if(arr1[i] > arr2[i]){
+                A++;
+            }
+            
+            if(arr1[i] < arr2[i]){
+                B++;
+            }
+        }
+        
+        if(A > B){
+            return "A";
+        }
+        
+        else if(B > A){
+            return "B";
+        }
+        
+        return "DRAW";
+    }
+}
+
 
