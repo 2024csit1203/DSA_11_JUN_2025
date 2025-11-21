@@ -820,5 +820,26 @@ class Solution {
     }
 }
 
+// 111. Friendly Array -> 21 Nov 2025
+
+class Solution {
+    public int calculateFriendliness(int[] arr) {
+        // code here
+        int ans = 0;
+        
+        for(int i = 0; i < arr.length; i++){
+            if(i == arr.length -1){
+                ans += Math.abs(arr[i] - arr[0]);
+            }
+            
+            else{
+                ans += Math.abs(arr[i] - arr[i+1]);
+            }
+        }
+        
+        return ans;
+    }
+}
+
 
 
