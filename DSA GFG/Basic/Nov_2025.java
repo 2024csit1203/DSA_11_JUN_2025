@@ -841,5 +841,24 @@ class Solution {
     }
 }
 
+// 112. Elements before which no element is bigger -> 21 Nov 2025
+
+class Solution {
+    public int countElements(int[] arr) {
+        // code here
+        int num = arr[0];
+        int ans = 1;
+        
+        for(int i = 1; i < arr.length -1; i++){
+            if(num < arr[i]){
+                num = arr[i];
+                ans++;
+            }
+        }
+        
+        return ans;
+    }
+}
+
 
 
