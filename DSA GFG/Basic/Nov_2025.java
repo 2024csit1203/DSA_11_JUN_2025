@@ -860,5 +860,20 @@ class Solution {
     }
 }
 
+// 113. Farthest Index -> 22 Nov 2025
+
+class Solution {
+    public int findIndex(int[] arr, int x) {
+        // code
+        for(int i = arr.length - 1; i >= 0; i--){
+            if(x == arr[i]){
+                return i+1;
+            }
+        }
+        
+        return -1;
+    }
+}
+
 
 
