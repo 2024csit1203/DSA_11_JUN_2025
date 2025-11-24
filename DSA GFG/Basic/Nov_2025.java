@@ -930,6 +930,28 @@ class Solution {
     }
 }
 
+// 116. Reading books -> 24 Nov 2025
+
+class Solution {
+    public int maxPoint(int k, int[] arr1, int[] arr2) {
+         int n = arr1.length;
+        
+        int ans = 0;
+        
+        for(int i = 0; i < n; i++){
+            int num = k/arr1[i];
+            
+            int num2 = num * arr2[i];
+            
+            if(num2 > ans){
+                ans = num2;
+            }
+        }
+        
+        return ans;
+    }
+}
+
 
 
 
