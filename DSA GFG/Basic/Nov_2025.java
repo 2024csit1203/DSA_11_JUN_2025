@@ -905,6 +905,31 @@ class Solution {
     }
 }
 
+// 115. Max Odd Sum -> 24 Nov 2025
+
+class Solution {
+    public int findMaxOddSum(int[] arr) {
+        // code here
+        int sum = 0;
+        int min_odd = Integer.MAX_VALUE;
+        
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] > 0){
+                sum += arr[i];
+            }
+            if(min_odd > Math.abs(arr[i]) && Math.abs(arr[i]) % 2 != 0){
+                min_odd = Math.abs(arr[i]);
+            }
+        }
+        
+        if(sum % 2 == 0){
+            sum = sum - min_odd;
+        }
+        
+        return sum;
+    }
+}
+
 
 
 
