@@ -952,7 +952,7 @@ class Solution {
     }
 }
 
-// 117. Sum of Digit Modified -> 28 Nov 2025
+// 120. Sum of Digit Modified -> 28 Nov 2025
 
 class Solution {
     int isMagic(int N) {
