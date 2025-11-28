@@ -952,6 +952,32 @@ class Solution {
     }
 }
 
+// 117. Sum of Digit Modified -> 28 Nov 2025
+
+class Solution {
+    int isMagic(int N) {
+        int sum = 0;
+    
+    while (N > 0) {
+        sum += N % 10;
+        N = N / 10;
+    }
+    
+    // If sum is still greater than or equal to 10, repeat the process
+    if (sum >= 10) {
+        return isMagic(sum);
+    }
+
+    // If the sum is 1, it's a magic number
+    if (sum == 1) {
+        return 1; // It is a magic number
+    } else {
+        return 0; // Not a magic number
+    }
+        
+    }
+}
+
 
 
 
