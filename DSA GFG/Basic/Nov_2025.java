@@ -978,6 +978,34 @@ class Solution {
     }
 }
 
+// 122. No of Carry Operations -> 30 Nov 2025
+
+class Solution {
+    static int countCarry(Long A, Long B) {
+        // code here
+        long carry = 0;
+        int ans = 0;
+        
+        while(A > 0 && B > 0){
+            long num1 = A % 10;
+            long num2 = B % 10;
+            
+            if(num1 + num2 + carry > 9){
+                carry = 1;
+                ans++;
+            }
+            else{
+                carry = 0;
+            }
+            
+            A = A / 10;
+            B = B / 10;
+        }
+        
+        return ans;
+    }
+};
+
 
 
 
