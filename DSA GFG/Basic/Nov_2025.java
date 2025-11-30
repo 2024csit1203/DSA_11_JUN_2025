@@ -1006,6 +1006,26 @@ class Solution {
     }
 };
 
+// 124. Evaluate the expression -> 30 Nov 2025
+
+class Solution {
+    public int evaluate_exp(int n) {
+        // Code here
+         return (n % 2 == 0) ? 1 : -1;
+    }
+}
+
+/* Expression ka answer sirf (-1)^n hota hai 🙂 
+ Yaani:
+
+ Agar n even hai → value = +1
+
+ Agar n odd hai → value = -1
+
+ Matlab:
+
+ f(n−1)⋅f(n+1)−f(n)2=(−1)^n */
+
 
 
 
