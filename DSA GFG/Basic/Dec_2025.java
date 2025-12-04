@@ -38,3 +38,19 @@ class Solution {
         }
     }
 }
+
+// 128. Check if divisible by 5 -> 04 Dec 2025
+
+class Solution {
+    static int divisibleBy5(String N) {
+        // code here
+        char lastDigit = N.charAt(N.length() - 1);
+
+    // Check if the last digit is 0 or 5
+    if (lastDigit == '0' || lastDigit == '5') {
+        return 1;
+    }
+    
+    return 0;
+    }
+}
