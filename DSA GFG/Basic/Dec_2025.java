@@ -79,3 +79,22 @@ class Solution {
         }
     }
 };
+
+// 131. Common Divisors -> 05 Dec 2025
+
+class Solution {
+    static long commDiv(long a, long b) {
+        // code here
+        int count = 0;
+        long num = 1;
+        
+        while(num <= a){
+            if(a % num == 0 && b % num == 0){
+                count++;
+            }
+            num++;
+        }
+        
+        return count;
+    }
+}
