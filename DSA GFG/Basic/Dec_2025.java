@@ -135,3 +135,26 @@ class Solution {
         return count;
     }
 }
+
+// 136. Krishnamurthy number ->  05 Dec 2025
+
+class Solution {
+    static String isKrishnamurthy(int N) {
+        int ans = 0;
+        int M = N;
+        
+        while(N > 0){
+            int num = N % 10;
+            int num2 = 1;
+            
+            for(int i = 1; i <= num; i++){
+                num2 = num2 * i;   // FIXED factorial calculation
+            }
+            
+            ans += num2;
+            N = N / 10;
+        }
+        
+        return ans == M ? "YES" : "NO";
+    }
+};
