@@ -118,3 +118,20 @@ class Solution {
         return ans;
     }
 }
+
+// 135. Count numbers divisible by M -> 05 Dec 2025
+
+class Solution {
+    static int countDivisibles(int A, int B, int M) {
+        // code here
+        int num = M;
+        int count = 0;
+        while(num <= B){
+            if(num>=A && num<=B){
+                count++;
+            }
+            num = num + M;
+        }
+        return count;
+    }
+}
