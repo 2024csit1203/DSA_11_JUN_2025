@@ -98,3 +98,23 @@ class Solution {
         return count;
     }
 }
+
+// 132. Sum of divisors -> 05 Dec 2025
+
+class Solution {
+    static long divSum(long n) {
+        // code here
+        long num = 1;
+        long ans = 0;
+        
+        while(num <= n / 2){
+            if(n % num == 0){
+                ans += num;
+            }
+            
+            num++;
+        }
+        
+        return ans;
+    }
+}
