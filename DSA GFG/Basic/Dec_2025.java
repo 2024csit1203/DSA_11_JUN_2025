@@ -54,3 +54,28 @@ class Solution {
     return 0;
     }
 }
+
+// 129. Disarium Number -> 05 Dec 2025
+
+class Solution {
+    static int isDisarium(int N) {
+        int numDigits = String.valueOf(N).length();
+
+        int sum = 0;
+        int temp = N;
+
+        while (temp > 0) {
+            int digit = temp % 10;
+            sum += Math.pow(digit, numDigits);
+            numDigits--;
+            temp /= 10;
+        }
+
+        
+        if (sum == N) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+};
