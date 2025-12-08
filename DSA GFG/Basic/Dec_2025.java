@@ -158,3 +158,26 @@ class Solution {
         return ans == M ? "YES" : "NO";
     }
 };
+
+// 137. Sum of Digits Divisibility -> 08 Dec 2025
+
+class Solution {
+    int isDivisible(int N) {
+        // code here
+        int M = N;
+        int sum = 0;
+        
+        
+        while(M > 0){
+            sum += M % 10;
+            M = M / 10;
+        }
+        
+        if(N % sum == 0){
+            return 1;
+        }
+        
+        return 0;
+    }
+};
+
