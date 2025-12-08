@@ -205,3 +205,18 @@ class Solution {
     }
 }
 
+// 140. Check perfect square -> 08 Dec 2025
+
+class Solution {
+    static long isPerfectSquare(long n) {
+        // code here
+        int square = (int) Math.sqrt(n);
+        
+        if(square * square == n){
+            return 1;
+        }
+        
+        return 0;
+    }
+}
+
