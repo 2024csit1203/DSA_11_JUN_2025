@@ -181,3 +181,16 @@ class Solution {
     }
 };
 
+// 138. 12 hour clock addition -> 08 Dec 2025
+
+class Solution {
+    static int clockSum(int num1, int num2) {
+        // code here
+        int sum = num1 + num2;
+        
+        int ans = sum % 12;
+        
+        return ans;
+    }
+}
+
