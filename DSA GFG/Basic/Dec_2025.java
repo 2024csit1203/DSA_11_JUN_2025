@@ -254,3 +254,22 @@ class Solution {
     }
 }
 
+// 142. Message Spreading -> 08 Dec 2025
+
+class Solution {
+    static int minimumMessages(int N) {
+        // code here
+         if(N == 1){
+            
+            return 0;
+        }
+        
+        if(N == 2){
+            return 2;
+        }
+        
+        
+        return N * 2 - 2;
+    }
+}
+
