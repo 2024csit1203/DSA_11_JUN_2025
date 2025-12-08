@@ -194,3 +194,14 @@ class Solution {
     }
 }
 
+// 139. Celsius to Fahrenheit Conversion -> 08 Dec 2025
+
+class Solution {
+    static double celciusToFahrenheit(int C) {
+        // code here
+        double F =((double)(9 * C)/5) + 32;
+        
+        return F;
+    }
+}
+
