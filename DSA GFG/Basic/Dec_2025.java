@@ -220,3 +220,37 @@ class Solution {
     }
 }
 
+// 141. Strong Numbers -> 08 Dec 2025
+
+class Solution {
+    public int is_StrongNumber(int n) {
+        int ans = 0;
+        int M = n;
+        while(M > 0){
+            
+            int x = M % 10;
+            
+           ans = ans + factorial(x);
+            
+            M = M / 10;
+        }
+        
+        if(ans == n){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+        
+    }
+    
+    public static int factorial(int x){
+        int sum = 1;
+        for(int i = 1; i <= x; i++){
+            sum = sum * i;
+        }
+        return sum;
+    
+    }
+}
+
