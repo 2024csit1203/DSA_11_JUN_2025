@@ -273,3 +273,13 @@ class Solution {
     }
 }
 
+// 145. Mind Game -> 10 Dec 2025
+
+class Solution {
+    static int mindGame(int K) {
+        int ChosenNum = 5;
+        int ans = (((ChosenNum * 2) + K)/2)-ChosenNum;
+        return ans;
+    }
+};
+
