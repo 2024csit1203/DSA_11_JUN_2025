@@ -283,3 +283,16 @@ class Solution {
     }
 };
 
+// 146. Perfect Squares in a Range -> 13 Dec 2025
+
+class Solution {
+    static int numOfPerfectSquares(int a, int b) {
+    int start = (int) Math.ceil(Math.sqrt(a)); 
+    int end = (int) Math.floor(Math.sqrt(b));
+    if (start > end) {
+        return 0;
+    }
+    return (end - start + 1);
+    }
+};
+
