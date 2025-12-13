@@ -296,3 +296,22 @@ class Solution {
     }
 };
 
+// 147. Doctors Clinic -> 13 Dec 2025
+
+class Solution {
+    static int waitingTime(int N, int X) {
+        
+        int Y = 10;
+    
+        int total_time = Y * (N - 1);
+        
+        int take_time = X * (N - 1);
+        
+        if(total_time > take_time){
+            return total_time - take_time;
+        }
+        
+        return 0;
+    }
+}
+
