@@ -315,3 +315,33 @@ class Solution {
     }
 }
 
+// 149. Strong Numbers -> 14 Dec 2025
+
+class Solution {
+    static int isStrong(int N) {
+        // code here
+        int ans = 0;
+        int M = N;
+        while(M > 0){
+            int x = M % 10;
+           ans = ans + factorial(x);
+            M = M / 10;
+        }
+        
+        if(ans == N){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
+    
+    public static int factorial(int x){
+        int sum = 1;
+        for(int i = 1; i <= x; i++){
+            sum = sum * i;
+        }
+        return sum;
+    }
+};
+
